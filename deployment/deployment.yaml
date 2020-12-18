@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    service: api-frontend
+  name: udagram-frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        service: frontend
+    spec:
+      containers:
+        - image: dhadhazi/udagram-frontend
+          name: udagram-frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
