@@ -1,14 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: api-frontend
   name: udagram-frontend
+spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: udagram-frontend
   template:
     metadata:
       labels:
-        service: frontend
+        app: udagram-frontend
     spec:
       containers:
         - image: dhadhazi/udagram-frontend

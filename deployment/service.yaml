@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: api-frontend
-  name: api-frontend
+    service: udagram-frontend
+  name: udagram-frontend
 spec:
   ports:
     - name: "http"
       port: 80
       targetPort: 80
   selector:
-    service: api-frontend
+    service: udagram-frontend
