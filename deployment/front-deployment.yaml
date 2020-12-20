@@ -17,5 +17,5 @@ spec:
           name: udagram-frontend
           imagePullPolicy: Always
           ports:
-            - containerPort: 8100
+            - containerPort: 80
       restartPolicy: Always
