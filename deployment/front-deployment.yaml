@@ -13,7 +13,7 @@ spec:
         app: udagram-frontend
     spec:
       containers:
-        - image: dhadhazi/udagram-frontend:latest
+        - image: dhadhazi/udagram-frontend
           name: udagram-frontend
           imagePullPolicy: Always
           ports:
